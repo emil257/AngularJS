@@ -1,0 +1,42 @@
+<div class="offer" ng-repeat="offer in offers">
+    <img ng-src="./images/{{offer.imgUrl}}">
+    <div class="offer-title-bg"><span class="offer-title">{{offer.title}}</span></div>
+    <div class="offer-info">
+        <span class="offer-desc">{{ offer.desc }}</span>
+        <div class="offer-info-footer">
+            <span class="offer-price">€{{ offer.price }}</span>
+            <a href="#!offer" class="my-btn offer-btn">Add to cart!</a>
+        </div>
+    </div>
+</div>
+
+<div class="how-it-works">
+    <p>How it works</p>
+    <hr>
+    <div class="how-it-works-path">
+        <img src="images/s1.png">
+        <img class="how-arrow how-a1" src="images/path.png">
+        <img src="images/s2.png">
+        <img class="how-arrow how-a2" src="images/path.png">
+        <img class="how-dev" src="images/s3.png">
+        <img class="how-arrow how-a3" src="images/path.png">
+        <img class="how-rate" src="images/s4.png">
+    </div>
+</div>
+
+<div class="contact">
+    <div class="contact-info-container">
+        <p class="contact-info">Want to know more about us?
+            Feel free to ask any question!</p>
+        <img src="./images/help.png">
+    </div>
+    <form class="contact-form" action="">
+        <label for="">Name</label>
+        <input type="text">
+        <label for="">E-mail</label>
+        <input type="text">
+        <label for="">Whats on your mind?</label>
+        <textarea cols="30" rows="5"></textarea>
+        <button class="my-btn contact-btn">Send!</button>
+    </form>
+</div>

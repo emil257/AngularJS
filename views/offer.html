@@ -1,0 +1,62 @@
+<div class="checkout">
+  <div class="checkout-head">
+    <p class="check-title">Power leveling calculator</p>
+    <hr>
+  </div>
+  <div class="checkout-desc">
+    <p class="checkout-desc-p">Summary</p>
+    <ul class="checkout-desc-ul">
+      <li>Fast service</li>
+      <li>Account sharing</li>
+      <li>Boost selected level interval</li>
+    </ul>
+    <p class="checkout-desc-p">Includes</p>
+    <ul class="checkout-desc-ul">
+      <li>Leveling character 1 - 60</li>
+      <li>60% mount</li>
+      <li>Your character will be equipped in quest items</li>
+      <li>Leveling in specified time</li>
+    </ul>
+  </div>
+  <form class="checkout-form" action="">
+    <label for="">Class</label>
+    <input type="text">
+    <label for="">Current level</label>
+    <input type="text">
+    <label for="">Desired level</label>
+    <input type="text">
+    <label for="">Leveling speed</label>
+    <div class="level-speed-radio">
+      <input type="radio" id="male" name="speed" value="male">
+      <label class="checkout-radio-label" for="">Normal leveling</label>
+    </div>
+    <div class="level-speed-radio">
+      <input type="radio" id="male" name="speed" value="male">
+      <label class="checkout-radio-label" for="">Medium leveling</label>
+    </div>
+    <div class="level-speed-radio">
+      <input type="radio" id="male" name="speed" value="male">
+      <label class="checkout-radio-label" for="">Fast leveling</label>
+    </div>
+    <p class="checkout-price">Calculated price: €0.00</p>
+    <button class="my-btn checkout-btn">Order now!</button>
+  </form>
+
+  <img class="checkout-img" src="./images/lvlup.png">
+</div>
+<style>
+  body {
+    background-image: url('./images/alt-bg.png');
+    background-position-y: -7.5rem;
+    height: 100vh;
+  }
+
+  .banner {
+    display: none;
+  }
+
+  .footer {
+    position: relative;
+    bottom: -39px;
+  }
+</style>
