@@ -1,11 +1,16 @@
 <div class="offer" ng-repeat="offer in offers">
     <img ng-src="./images/{{offer.imgUrl}}">
-    <div class="offer-title-bg"><span class="offer-title">{{offer.title}}</span></div>
     <div class="offer-info">
-        <span class="offer-desc">{{ offer.desc }}</span>
-        <div class="offer-info-footer">
-            <span class="offer-price">€{{ offer.price }}</span>
-            <a href="#!offer" class="my-btn offer-btn">Add to cart!</a>
+        <div>
+            <span class="offer-title">{{offer.title}}</span>
+            <span class="offer-desc">{{ offer.desc }}</span>
+        </div>
+        <div>
+            <hr>
+            <div class="offer-info-footer">
+                <span class="offer-price">€{{ offer.price }}</span>
+                <a href="#!offer" class="my-btn offer-btn">Add to cart!</a>
+            </div>
         </div>
     </div>
 </div>
