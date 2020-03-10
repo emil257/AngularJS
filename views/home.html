@@ -2,14 +2,14 @@
     <img ng-src="./images/{{offer.imgUrl}}">
     <div class="offer-info">
         <div>
-            <span class="offer-title">{{offer.title}}</span>
+            <span class="offer-title">{{ offer.title }}</span>
             <span class="offer-desc">{{ offer.desc }}</span>
         </div>
         <div>
             <hr>
             <div class="offer-info-footer">
                 <span class="offer-price">€{{ offer.price }}</span>
-                <a href="#!offer" class="my-btn offer-btn">Add to cart!</a>
+                <a href="#!offer/{{ $index }}" class="my-btn offer-btn">Add to cart!</a>
             </div>
         </div>
     </div>
@@ -36,12 +36,9 @@
         <img src="./images/help.png">
     </div>
     <form class="contact-form" action="">
-        <label for="">Name</label>
-        <input type="text">
-        <label for="">E-mail</label>
-        <input type="text">
-        <label for="">Whats on your mind?</label>
-        <textarea cols="30" rows="5"></textarea>
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="E-mail">
+        <textarea cols="30" rows="5" placeholder="Whats on your mind?"></textarea>
         <button class="my-btn contact-btn">Send!</button>
     </form>
 </div>
