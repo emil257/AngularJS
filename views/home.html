@@ -36,9 +36,9 @@
         <img src="./images/help.png">
     </div>
     <form class="contact-form" action="">
-        <input type="text" placeholder="Name">
-        <input type="text" placeholder="E-mail">
-        <textarea cols="30" rows="5" placeholder="Whats on your mind?"></textarea>
-        <button class="my-btn contact-btn">Send!</button>
+        <input type="text" placeholder="Name" ng-model="name">
+        <input type="text" placeholder="E-mail" ng-model="email">
+        <textarea cols="30" rows="5" placeholder="Whats on your mind?" ng-model="msg"></textarea>
+        <button class="my-btn contact-btn" ng-click="sendQuestion()">Send!</button>
     </form>
 </div>

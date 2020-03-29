@@ -1,26 +1,51 @@
 var app = angular.module("maelstormApp", ["ngRoute"])
+let _offers = [
+    { title: 'Character boost!', desc: 'Buy your way to lvl 60 in classic Wow!', price: '90', imgUrl: 'lvlup.png' },
+    { title: 'Epic Mount!', desc: 'Buy your Epic mount now!', price: '60', imgUrl: 'mount.png' },
+    { title: 'Classic Gold!', desc: 'Buy any ammount of Gold!', price: '1/g', imgUrl: 'gold.png' },
+    { title: 'Character boost!', desc: 'Buy your way to lvl 60 in classic Wow!', price: '60', imgUrl: 'lvlup.png' }
+]
 
 app.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
             templateUrl: "views/home.html",
-            controller: "homeController"
+            controller: "offerController"
         })
-        .when("/offer", {
-            templateUrl: "views/offer.html"
+        .when("/login", {
+            templateUrl: "views/login.html",
+            controller: "loginController"
+        })
+        .when("/offer/:id", {
+            templateUrl: "views/offer.html",
+            controller: "offerController"
         })
 })
 
 
+app.controller("loginController", function ($scope, $routeParams) {
+    $scope.offers = _offers
+    $scope.login = function () {
+        console.log({
+            username: $scope.username,
+            password: $scope.password
+        })
+        alert('Not implemented!')
+    }
+})
 
+app.controller("offerController", function ($scope, $routeParams) {
+    $scope.offers = _offers
+    $scope.currentOffer = $routeParams.id
 
-app.controller("homeController", function ($scope) {
-    $scope.offers = [
-        { title: 'Character boost!', desc: 'Buy your way to lvl 60 in classic Wow!', price: '90', imgUrl: 'lvlup.png' },
-        { title: 'Epic Mount!', desc: 'Buy your Epic mount now!', price: '60', imgUrl: 'mount.png' },
-        { title: 'Classic Gold!', desc: 'Buy any ammount of Gold!', price: '1/g', imgUrl: 'gold.png' },
-        { title: 'Character boost!', desc: 'Buy your way to lvl 60 in classic Wow!', price: '60', imgUrl: 'lvlup.png' }
-    ]
+    $scope.sendQuestion = function () {
+        console.log({
+            name: $scope.name,
+            email: $scope.email,
+            message: $scope.msg
+        })
+    }
+
 })
 
 
@@ -29,7 +54,7 @@ app.directive("apphead", function () {
     return {
         template:
             '<nav class="navBar">' +
-            '<button class="my-btn">Login</button>' +
+            '<button class="my-btn" onclick="window.location=\'#!login\'">Login</button>' +
             '<img src="./images/Cart.png">' +
             '</nav>' +
             '<div class="banner">' +

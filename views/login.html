@@ -1,0 +1,47 @@
+<div class="offer" ng-repeat="offer in offers">
+  <img ng-src="./images/{{offer.imgUrl}}">
+  <div class="offer-info">
+    <div>
+      <span class="offer-title">{{ offer.title }}</span>
+      <span class="offer-desc">{{ offer.desc }}</span>
+    </div>
+    <div>
+      <hr>
+      <div class="offer-info-footer">
+        <span class="offer-price">€{{ offer.price }}</span>
+        <a href="#!offer/{{ $index }}" class="my-btn offer-btn">Add to cart!</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="loginbg">
+  <div>
+    <div class="loginHead">
+      <img class="loginHeadlogo" src="./images/Logo.png" alt="">
+      <img class="loginHeadCross" src="./images/Icon metro-cross.png" onclick="window.location='#!'" alt="">
+    </div>
+    <form class="loginForm">
+      <label for="uname">Username</label>
+      <input type="text" ng-model="username">
+      <label for="uname">Password</label>
+      <input type="password" ng-model="password">
+      <div class="remember-me-section">
+        <input class="rMe-checkbox" type="radio">
+        <label class="rMe">Remember me</label>
+      </div>
+      <div class="login-btn-grp">
+        <button class="my-btn login-f-btns login-btn-r">Register</button>
+        <button class="my-btn login-f-btns login-btn-l" ng-click="login()">Login</button>
+      </div>
+      <p class="forgot-pw">Forgot password?</p>
+    </form>
+  </div>
+</div>
+
+
+<style>
+  body {
+    overflow: hidden;
+  }
+</style>

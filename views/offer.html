@@ -38,11 +38,11 @@
       <input type="radio" id="male" name="speed" value="male">
       <label class="checkout-radio-label" for="">Fast leveling</label>
     </div>
-    <p class="checkout-price">Calculated price: €0.00</p>
+    <p class="checkout-price">Calculated price: €{{offers[currentOffer].price}}</p>
     <button class="my-btn checkout-btn">Order now!</button>
   </form>
 
-  <img class="checkout-img" src="./images/lvlup.png">
+  <img class="checkout-img" ng-src="./images/{{offers[currentOffer].imgUrl}}">
 </div>
 <style>
   body {

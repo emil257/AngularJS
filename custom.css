@@ -63,7 +63,7 @@ section p {
   width: 100%;
   align-items: center;
   justify-content: center;
-  padding-top: 4rem;
+  padding: 4rem 0 0 0;
 }
 .banner img {
   width: 75%;
@@ -164,8 +164,8 @@ options {
   align-items: center;
 }
 .offer-btn{
-  font-size: 1.2rem;
-  padding: .2rem .9rem;
+  font-size: 1.1rem;
+  padding: .3rem .8rem;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px;
 }
@@ -177,6 +177,7 @@ options {
 /* --- HOW IT WORKS START --- */
 .how-it-works{
   grid-column: 1/-1;
+  padding: 2rem 0;
 }
 .how-it-works-path{
   margin-top: 3rem;
@@ -199,7 +200,7 @@ options {
 
 /* --- CONTACT START --- */
 .contact{
-  margin-top: 2rem;
+  padding: 4rem 0 2rem 0;
   grid-column: 1/-1;
   display: flex;
   flex-direction: column;
@@ -224,31 +225,27 @@ options {
   margin-bottom: 3rem;
 }
 .contact-form{
-  background-color: #3C585D;
+  background-color: rgb(255, 255, 255);
   padding: 1rem;
   border-radius: 5px;
-  color: white;
   width: 100%;
   max-width: 450px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px;
-}
-.contact-form input,label,textarea{
-  display: block;
-  width: 100%;
-  resize: none;
-  border-radius: 5px;
-  border: none;
-}
-.contact-form label{
-  font-size: 1.3rem;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 6px 18px;
 }
 .contact-form input,textarea{
-  padding: .2rem .3rem;
-  margin-bottom: .4rem;
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  resize: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: .1rem .5rem;
+  margin-bottom: .8rem;
+  border: 2px solid rgba(60, 88, 93, 0.35);
 }
 .contact-btn{
-  margin-top: 1rem;
   width: 100% !important;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px;
 }
 /* --- CONTACT END --- */
 
@@ -343,13 +340,106 @@ options {
 .checkout-img{
   display: none;
   width: 100%;
-  background-position: cover;
+  height: 100%;
   grid-column-start: 1;
   grid-row-start: 2;
   border-radius: 10px;
 }
 /* --- CHECKOUT PAGE END --- */
 
+/* --- LOGIN PAGE START --- */
+.loginbg {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginForm{
+  background-color: white;
+  padding: 1.2rem 1.4rem;
+  width: 280px;
+  border-radius: 0 0 5px 5px;
+}
+.loginHead{
+  width: 100%;
+  background-color: #3C585D;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .8rem 1.4rem;
+  border-radius: 5px 5px 0 0;
+}
+.loginHeadlogo {
+  width: 150px;
+}
+.loginHeadCross{
+  margin-top: 3px;
+  width: 20px;
+}.loginHeadCross:hover{
+  cursor: pointer;
+}
+.loginForm label,input{
+  width: 100%;
+  display: block;
+  font-weight: 500;
+}
+.loginForm input {
+  border: none;
+  border-radius: 5px;
+  border: 2px solid rgb(226, 226, 226);
+  box-shadow: rgba(0, 0, 0, 0.014) 0 3px 6px;
+  margin-bottom: .8rem;
+}
+.rMe-checkbox{    
+  margin-bottom: 0 !important;
+  margin-right: .6rem;
+  font-size: 2rem;
+  width: 18px;
+  height: 18px;
+}
+.rMe{
+  margin: 0 !important;
+}
+.remember-me-section{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.login-btn-grp{
+  display: flex;
+  justify-content: space-between;
+  margin-top: .8rem;
+}
+.login-btn-r{
+  background-color: white;
+  color: rgb(253, 94, 47, 0.8);
+  border: 2px solid rgb(253, 94, 47, 0.8);
+}
+.login-btn-l{
+  border: 2px solid rgba(253, 95, 47, 0);
+}
+.login-f-btns{
+  font-size: 1rem;
+  width: 48%;
+  padding: 0;
+}
+.forgot-pw{
+  position: relative;
+  color: #707070b6;
+  text-decoration: underline;
+  margin-top: .8rem;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: .95rem;
+  text-align: right;
+}
+/* --- LOGIN PAGE END --- */
 
 @media (min-width: 768px) {
   .option-grp{
@@ -435,10 +525,10 @@ options {
 @media (min-width: 1200px) {
   
   .banner{
-    padding: 14rem 0;
+    padding: 10rem 0 6rem 0;
   }
   .banner img {
-    max-width: 500px;
+    max-width: 550px;
   }
   .option-grp{
     grid-template-columns: repeat(5, 1fr);
